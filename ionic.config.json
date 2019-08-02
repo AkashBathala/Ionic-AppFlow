@@ -1,6 +1,8 @@
 {
   "name": "SideMenuAppFlow",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "67f220dc"
 }
