@@ -8,7 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { Deploy } from 'plugins/cordova-plugin-ionic/dist/ngx';
+import { Deploy } from 'plugins/cordova-plugin-ionic/dist/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +17,7 @@ import { AppComponent } from './app.component';
   providers: [
     StatusBar,
     SplashScreen,
-    // Deploy,
+    Deploy,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

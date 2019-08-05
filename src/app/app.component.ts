@@ -3,8 +3,7 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-// import { Deploy } from 'plugins/cordova-plugin-ionic/dist/ngx';
-
+import { Deploy } from 'plugins/cordova-plugin-ionic/dist/ngx';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -15,7 +14,7 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    // private deploy: Deploy
+    private deploy: Deploy
   ) {
     this.initializeApp();
   }
@@ -24,7 +23,7 @@ export class AppComponent {
     this.platform.ready().then(async () => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      // await this.deploy.configure({ channel: 'BETA' });
+      await this.deploy.configure({ channel: 'BETA' });
     });
   }
 }
