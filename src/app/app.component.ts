@@ -22,6 +22,8 @@ export class AppComponent {
   initializeApp() {
     this.platform.ready().then(async () => {
       this.statusBar.styleDefault();
+      this.statusBar.styleLightContent();
+      this.statusBar.backgroundColorByHexString('#701337');
       this.splashScreen.hide();
       await this.deploy.configure({ channel: 'BETA' });
     });
