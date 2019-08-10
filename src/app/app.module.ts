@@ -8,10 +8,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddVisitorPageComponent } from './add-visitor-page/add-visitor-page.component';
 // import { Deploy } from 'plugins/cordova-plugin-ionic/dist/ngx';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AddVisitorPageComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
