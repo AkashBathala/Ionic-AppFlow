@@ -1,24 +1,145 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
+    <ion-item lines="none" color="primary" class="margin-padding-zero ">
+      <span class="font-weight-600 font-19 gotham">Visitor</span>
+      <ion-button slot="end" class="ion-refresh-button">
+        <ion-icon slot="end" class="font-24" name="refresh"></ion-icon>
+        <span slot="end" class="font-weight-600 font-18 margin-left-10 gotham">Refresh</span>
+      </ion-button>
+    </ion-item>
   </ion-toolbar>
+  <div class="grey-back justify-center">
+    <ion-segment mode="md" class="bg-white margin-padding-zero ">
+      <ion-grid no-padding>
+        <ion-row no-padding>
+          <!-- <ion-col size="4"> -->
+          <ion-segment-button mode="md" class="font-12" value="pending" class="margin-padding-zero font-12">
+            <ion-label class="margin-padding-zero gotham">Pending</ion-label>
+          </ion-segment-button>
+          <!-- </ion-col> -->
+
+          <!-- <ion-col size="4"> -->
+          <ion-segment-button mode="md" class="font-12 ion-segment-button" value="checkedIn">
+            <ion-label class="margin-padding-zero gotham">Checked in</ion-label>
+          </ion-segment-button>
+          <!-- </ion-col> -->
+
+          <!-- <ion-col size="4"> -->
+          <ion-segment-button mode="md" class="font-12 " value="checkedOut">
+            <ion-label class="margin-padding-zero gotham">Checked out</ion-label>
+          </ion-segment-button>
+          <!-- </ion-col> -->
+        </ion-row>
+      </ion-grid>
+    </ion-segment>
+    <ion-searchbar mode="md" placeholder="Search" class="margin-top-2" no-padding type="search" [debounce]="250">
+    </ion-searchbar>
+  </div>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-radio-group name="auto">
-      <ion-list-header>Auto Manufacturers</ion-list-header>
-      <ion-item>
-        <ion-label>Tesla</ion-label>
-        <ion-radio value="tesla"></ion-radio>
-      </ion-item>
-      <ion-item>
-        <ion-label>Ford</ion-label>
-        <ion-radio value="ford"></ion-radio>
-      </ion-item>
-    </ion-radio-group>
-  </ion-list>
+<ion-content class="max-available-height">
 
+  <div>
+    <!-- <div class="center-text margin-top-10" >
+      <ion-spinner name="lines"></ion-spinner>
+    </div> -->
+
+    <div class="txt-medium margin-top-20 txt-brown center-text" *ngIf="2>5">
+      No Visitors found!
+    </div>
+
+    <ion-fab (click)="routeToAddVisitorPage()" class="fix-position" vertical="bottom" horizontal="end">
+      <ion-fab-button color="primary">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+    <div class="full-width grey-back">
+      <ion-card class="padding-0 ticket-details-card">
+        <ion-card-content class="padding-0">
+          <ion-row size="12" class="border-bottom-silver-1 margin-0 padding-top-10 padding-left-16 padding-right-16">
+            <ion-col size="8" class="padding-0 ">
+              <ion-label>
+                <p class="font-20 dark-grey gotham-medium margin-bottom-10">visitor.visitor.name}}</p>
+              </ion-label>
+              <ion-label class="font-20 dark-grey">
+                <p class="font-20 dark-grey gotham-medium margin-bottom-10"> visitor.staff.firstName}}
+                  visitor.staff.lastName}}</p>
+              </ion-label>
+              <p class="font-14 margin-top-minus-5 gotham"><span class="fotham font-weight-600">Flat visiting :</span>
+                visitor.address}}
+              </p>
+              <p class="font-14 margin-top-minus-5 gotham"><span class="fotham font-weight-600">Visit Date :</span>
+                visitor.visitDate|date:'dd MMM yyyy'}}</p>
+              <p class="font-14 margin-top-minus-5 gotham"><span class="fotham font-weight-600">Vehical Number
+                  :</span>
+                visitor.vehicleRegistrationNumber}}</p>
+              <p class="font-14 margin-top-minus-5 gotham"><span class="fotham font-weight-600">Additional member
+                  :</span> visitor.additionalMember}}</p>
+              <p class="font-14 margin-top-minus-5 gotham"><span class="fotham font-weight-600">In
+                  time :</span>
+                visitor.inTime | date:'hh:mm a'}}
+              </p>
+              <p class="font-14 margin-top-minus-5 gotham"><span class="fotham font-weight-600">Badge Number :</span>
+                visitor.badgeNumber}}</p>
+              <p class="font-14 margin-top-minus-5 gotham"><span class="fotham font-weight-600">Out time :</span>
+                visitor.outTime | date:'hh:mm a'}}</p>
+
+              <p class="margin-top-20 margin-bottom-10 gotham"><span class="fotham font-weight-600">Created By
+                  :</span> visitor.createdBy.firstName}} visitor.createdBy.lastName}}</p>
+            </ion-col>
+            <ion-col size="4" class="padding-0">
+              <div>
+                <div>
+                  <ion-badge class="border-radius-10 float-right margin-top-5 font-10 gotham" color="employee">
+                    type |uppercase}}
+                  </ion-badge>
+                </div>
+              </div>
+              <div>
+                <ion-badge color="visitor.visitor.type}}" class="border-radius-10 font-10 float-right gotham">
+                  visitor.visitor.type|uppercase}}
+                </ion-badge>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row class="margin-top-5 margin-bottom-5 padding-right-10 padding-left-10" fixed>
+            <ion-col no-padding>
+              <ion-button mode="md" 
+                class="font-10 margin-left-5 height-30" color="success">
+                <p class="font-10 padding-bottom-0 margin-bottom-0 gotham font-weight-600">Check-in</p>
+              </ion-button>
+              <ion-button mode="md"  
+                class="font-10 margin-left-5 height-30" color="danger">
+                <p class="font-10 padding-bottom-0 font-weight-600 margin-bottom-0 gotham">CheckOut</p>
+              </ion-button>
+              <!--.inTime"-->
+              <ion-button mode="md"  
+                class="font-10 margin-left-5 height-30" color="success">
+                <p class="font-10 padding-bottom-0 font-weight-600 margin-bottom-0 gotham">Gate Pass</p>
+              </ion-button>
+              <!--*ngIf="!visitor.inTime && !visitor.outTime"-->
+              <ion-button mode="md"  class="font-10  margin-left-5 height-30" color="success">
+                <p class="font-10 padding-bottom-0 font-weight-600 margin-bottom-0 gotham">Materials</p>
+              </ion-button>
+              <ion-button color="light height-30" class="margin-left-5 ion-button">
+                <ion-icon slot="icon-only" name="image"></ion-icon>
+              </ion-button>
+            </ion-col>
+
+            <ion-col no-padding size="1" class="txt-align-right">
+              <ion-icon class="font-25 margin-top-6 txt-black" name="call"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+
+      <!-- <ion-infinite-scroll  threshold="15px"
+        (ionInfinite)="lazyLoadVisitors($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+      </ion-infinite-scroll> -->
+    </div>
+
+  </div>
 </ion-content>

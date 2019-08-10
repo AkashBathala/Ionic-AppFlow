@@ -1,1 +1,48 @@
 
+.ion-refresh-button {
+    --box-shadow: none;
+    --padding-bottom: 0px;
+    --padding-end: 0px;
+    --padding-start: 0px;
+    --padding-top: 0px;
+  }
+  .ticket-details-card {
+    background-color: white !important;
+    margin-top: 8px !important;
+    margin-bottom: 10px !important;
+  }
+  ion-content {
+    div {
+      background: #ecebe6 !important;
+    }
+    --background: #ecebe6 !important;
+  }
+  input:focus {
+    border: none !important;
+  }
+  .ion-button {
+    --padding-bottom: 4px;
+    --padding-end: 4px;
+    --padding-start: 4px;
+    --padding-top: 4px;
+  }
+  ion-button {
+    --padding-bottom: 0px !important;
+    --padding-end: 5px !important;
+    --padding-start: 5px !important;
+    --padding-top: 0px !important;
+  }
+  .ion-segment-button {
+    --padding-bottom: 0px !important;
+    --padding-end: 0px !important;
+    --padding-start: 0px !important;
+    --padding-top: 0px !important;
+  }
+  
+  ion-badge {
+    --padding-bottom: 2px;
+    --padding-end: 6px;
+    --padding-start: 6px;
+    --padding-top: 5px;
+  }
+  
