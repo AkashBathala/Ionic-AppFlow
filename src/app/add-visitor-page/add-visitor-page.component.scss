@@ -1,0 +1,66 @@
+sup {
+    color: red !important;
+    top: -0.1em !important;
+    font-size: 115% !important;
+  }
+  ion-button {
+    --box-shadow: none;
+  }
+  .click {
+    color: #881643 !important ;
+    border: 1px solid #881643 !important;
+  }
+  
+  .ion-item {
+    --inner-padding-bottom: 0px !important;
+    --inner-padding-end: 0px !important;
+    --inner-padding-start: 0px !important;
+    --inner-padding-top: 0px !important;
+    --padding-bottom: 0px !important;
+    --padding-end: 0px !important;
+    --padding-start: 0px !important;
+    --padding-top: 0px !important;
+  }
+  
+  ion-toggle {
+    --background: #ffffff;
+    --background-checked: #f04141;
+    --handle-background: #ffffff;
+  }
+  
+  ion-label {
+    --ion-color-primary-shade: red;
+    --ion-color-primary-tint: red;
+  }
+  .image {
+    justify-content: flex-end !important;
+    display: flex !important;
+  }
+  .img-icon {
+    font-size: x-large !important;
+    position: absolute !important;
+  }
+  .ion-image-item {
+    --inner-padding-bottom: 4px;
+    --inner-padding-end: 4px;
+    --inner-padding-start: 4px;
+    --inner-padding-top: 4px;
+    --min-height: 24px;
+    --padding-bottom: 4px;
+    --padding-end: 4px;
+    --padding-start: 4px;
+    --padding-top: 4px;
+    --transition: background-color 15ms linear;
+  }
+  .card-shadow-none {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important ;
+  }
+  
+  .arrow-down-icon {
+    position: absolute !important;
+    right: 1px !important;
+    bottom: 8px !important;
+    margin-bottom: 0px !important;
+  }
+  
