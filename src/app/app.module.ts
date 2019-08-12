@@ -8,15 +8,12 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddVisitorPageComponent } from './add-visitor-page/add-visitor-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddVisitorPageComponent
   ],
   entryComponents: [
-    AddVisitorPageComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
